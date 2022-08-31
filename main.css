@@ -46,10 +46,11 @@ header a {
 
 .about__image {
     width: 500px;
+    
 }
 
-.about__sun-image {
-    position: absolute;
+.about__info {
+    display: inline-block;
 }
 
 .about h1 {
@@ -225,19 +226,35 @@ footer {
 .about__sun-image {
     width: 100px;
     height: 100px;
+    position: absolute;
     animation: rotation 10s linear infinite;
-
 }
-
+/*.animate__animated.animate__fadeInRightBig {
+    --animate-duration: 2s;
+    animation: rotation 10s linear infinite;
+}*/
 @keyframes rotation {
     0% {
         transform: rotate(0deg);
-    }
+         }
 
     100% {
         transform: rotate(360deg);
+       
     }
 }
+
+
+/*@keyframes aboutInfoRotation{
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+
+    }
+}*/
 
 .footer__group1 {
     text-align: center;
@@ -248,27 +265,29 @@ footer {
 @media (max-width: 720px) {
     header {
         padding: 10px;
-       
+
     }
+
     .header__logo {
         height: 20px;
     }
-  
+
     header a {
-        margin-right: 10px;        
+        margin-right: 10px;
     }
-   
-   
-    .header__controls{
+
+
+    .header__controls {
         margin-top: 0px;
-       
-        
+
+
     }
+
     .about h1 {
         font-size: 36px;
         line-height: 40px;
     }
-    
+
     .about__image {
         width: 280px;
     }
@@ -304,14 +323,14 @@ footer {
 /*планшет*/
 @media (max-width: 1024px) {
     header {
-       padding: 20px;
-           
+        padding: 20px;
+
     }
-   
+
     .header__logo {
         height: 20px;
     }
-   
+
     .about h1 {
         font-size: 36px;
         line-height: 40px;
