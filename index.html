@@ -14,7 +14,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-    <link rel="stylesheet" href="fa/all.min.css">
     <link rel="stylesheet" href="main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -23,7 +22,7 @@
     <header>
         <img class="header__logo" src="img/logo.svg" alt="нет картинки">
         <div class="header__controls">
-            <a href="#contacts">Контакты</a>
+            <a href="#form">Контакты</a>
             <button>
                 Заказать
             </button>
@@ -35,7 +34,7 @@
             <h1> Солнечные панели GreenRobotic </h1>
             <p> Производите дешёвую экологически чистую электроэнергию
                 из солнечного света </p>
-            <button>
+            <button class="more-button" href="#features">
                 Узнать подробнее
                 <i class="bi bi-chevron-right"></i>
             </button>
@@ -78,7 +77,8 @@
             <div class="features__feedback">
                 <div class="features__feedback-left">
                     <h2>Нам доверяет<br>
-                        5000+ счастливых клиентов.
+                        <div class="features__clients-count"> 5000+ </div>
+                        счастливых клиентов.
                     </h2>
                     <p>Мы помогли тысячам людей перейти на зеленую энергию.<br>
                         После заказа мы позаботимся обо всем: доставка панелей, проект, установка, помощь в
@@ -122,7 +122,7 @@
             </div>
         </div>
     </section>
-    <selectin class='form'>
+    <selectin class='form' id="form">
         <div class="form__containter">
             <div class="header__controls">
                 <h1> Оставьте свои контакты </h1>
@@ -147,9 +147,13 @@
                         <option value="10-30"> 10 000₽ – 30 000₽ </option>
                         <option value="30-60"> 30 000₽ – 60 000₽ </option>
                         <option value="60-100"> 60 000₽ – 100 000₽ </option>
-                        <option value="100+"> 100 000₽ </option>
+                        <option value="other"> Другое </option>
                     </select>
+
                 </div>
+                <!--<div class="form__group form__other-input">
+                        <input type="text" placeholder="Введите ваш вариант">
+                    </div>-->
                 <button type="submit" class="form__submit">
                     Отправить заявку
                 </button>
@@ -194,7 +198,8 @@
 
 
     </footer>
-      <script src="js/canvas.js"></script>
+    <script src="js/canvas.js"></script>
+    <script src="js/animations.js"></script>
 </body>
 
 </html>

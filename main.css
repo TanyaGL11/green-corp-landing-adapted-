@@ -3,6 +3,7 @@
     top: 0;
     right: 0;
     height: 100%;
+    width: 100%;
 }
 
 button {
@@ -19,16 +20,29 @@ button {
 }
 
 header {
-    position: sticky;
+    position: fixed;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: white;
+    background-color: #ffffff00;
+    /*transition-property: background-color;
+    transition-duration: 0.25s;
+    transition: ease;
+    */
+    transition: box-shadow, background-color .25s ease;
     top: 0;
     z-index: 1;
 }
-
+header .animation{
+    transition: background-color 0.25s ease;/*анимация цвета 0,25сек по кривой Безье-ease*/
+}
+.header__scrolled {
+    background-color: #fff;/*После скролла должен измениться цвет фона*/
+    box-shadow: 0 12px 34px -11px rgb(65 62 101 / 10%); 
+}
 body {
     font-family: 'Releway', sens-serif;
     color: #213053;
@@ -83,7 +97,7 @@ header a {
     align-items: center;
     justify-content: space-around;
     padding-bottom: 115px;
-    padding-top: 115px;
+    padding-top: 200px;
     background: url('img/back.png') no-repeat;
     background-position: center;
     background-size: cover;
@@ -237,10 +251,6 @@ footer {
     animation: rotation 10s linear infinite;
 }
 
-/*.animate__animated.animate__fadeInRightBig {
-    --animate-duration: 2s;
-    animation: rotation 10s linear infinite;
-}*/
 @keyframes rotation {
     0% {
         transform: rotate(0deg);
@@ -251,18 +261,6 @@ footer {
 
     }
 }
-
-
-/*@keyframes aboutInfoRotation{
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-
-    }
-}*/
 
 .footer__group1 {
     text-align: center;
